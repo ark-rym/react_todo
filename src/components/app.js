@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './app.css'
-
 import { formatDistanceToNow } from 'date-fns'
 
 import NewTaskForm from './new-task-form'
