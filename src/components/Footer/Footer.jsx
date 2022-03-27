@@ -1,8 +1,8 @@
 import React from 'react'
 import propTypes from 'prop-types'
 
-import TaskFilter from './task-filter'
-import './footer.css'
+import { TaskFilter } from '../TaskFilter'
+import './Footer.scss'
 
 const Footer = ({ completedCount, onClearAllCompleted, onFilterItems, filter }) => {
   return (

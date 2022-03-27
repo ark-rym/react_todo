@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import propTypes from 'prop-types'
 
-import './task.css'
+import './Task.scss'
 
 export default class Task extends Component {
   static defaultProps = {
@@ -23,7 +23,6 @@ export default class Task extends Component {
   render() {
     const { label, onDeleted, onToggleCompleted, completed, date } = this.props
 
-    console.log(typeof date)
     let classNames = 'active'
     if (completed) {
       classNames = 'completed'
@@ -31,8 +30,8 @@ export default class Task extends Component {
 
     return (
       <li className={classNames}>
-        <div className="view">
-          <input className="toggle" type="checkbox" onClick={onToggleCompleted} />
+        <div className="view" onClick={onToggleCompleted}>
+          <input className="toggle" type="checkbox" onClick={onToggleCompleted} id="" />
           <label>
             <span className="description">{label}</span>
             <span className="created">created {date}</span>

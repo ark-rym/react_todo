@@ -1,8 +1,8 @@
 import React from 'react'
 import propTypes from 'prop-types'
 
-import Task from './task'
-import './task-list.css'
+import { Task } from '../Task'
+import './TaskList.scss'
 
 const TaskList = ({ todos, onDeleted, onToggleCompleted }) => {
   const elements = todos.map((item) => {
