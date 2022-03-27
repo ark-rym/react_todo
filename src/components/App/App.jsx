@@ -51,6 +51,20 @@ export default class App extends Component {
     })
   }
 
+  editItem = (id, value) => {
+    this.setState(({ todoData }) => {
+      const newArr = todoData.map((item) => {
+        if(item.id === id) ({
+          ...state,
+          label: value
+        })
+      })
+      return {
+        todoData: newArr,
+      }
+    })
+  }
+
   onToggleCompleted = (id) => {
     this.setState(({ todoData }) => {
       const idx = todoData.findIndex((el) => el.id === id)
@@ -98,7 +112,11 @@ export default class App extends Component {
           <NewTaskForm onItemAdded={this.addItem} />
         </header>
         <section className="main">
-          <TaskList onDeleted={this.deleteItem} onToggleCompleted={this.onToggleCompleted} todos={visibleItems} />
+          <TaskList 
+            onDeleted={this.deleteItem} 
+            onEdit={this.editItem}
+            onToggleCompleted={this.onToggleCompleted} 
+            todos={visibleItems} />
           <Footer
             completedCount={completedCount}
             onClearAllCompleted={this.clearAllCompleted}
