@@ -15,12 +15,12 @@ const NewTaskForm = ({ onItemAdded }) => {
   }
 
   const onLabelChange = (e) => {
-    if (checkInput(e.target.value)) {
+    // if (checkInput(e.target.value)) {
       setState((state) => ({
         ...state,
         label: e.target.value,
       }))
-    }
+    // }
   }
 
   const onMinChange = (e) => {
@@ -63,8 +63,8 @@ const NewTaskForm = ({ onItemAdded }) => {
       <input
         className="new-todo-form__timer"
         type="number"
-        min="0"
-        max="59"
+        // min="0"
+        // max="59"
         placeholder="Min"
         onChange={onMinChange}
         value={min}
@@ -73,8 +73,8 @@ const NewTaskForm = ({ onItemAdded }) => {
       <input
         className="new-todo-form__timer"
         type="number"
-        min="0"
-        max="59"
+        // min="0"
+        // max="59"
         placeholder="Sec"
         onChange={onSecChange}
         value={sec}
