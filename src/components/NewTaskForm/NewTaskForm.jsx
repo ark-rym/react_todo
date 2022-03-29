@@ -16,10 +16,10 @@ const NewTaskForm = ({ onItemAdded }) => {
 
   const onLabelChange = (e) => {
     // if (checkInput(e.target.value)) {
-      setState((state) => ({
-        ...state,
-        label: e.target.value,
-      }))
+    setState((state) => ({
+      ...state,
+      label: e.target.value,
+    }))
     // }
   }
 
