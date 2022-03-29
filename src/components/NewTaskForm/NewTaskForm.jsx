@@ -40,7 +40,6 @@ const NewTaskForm = ({ onItemAdded }) => {
   const onSubmit = (e) => {
     e.preventDefault()
     const { label, min, sec } = state
-    checkInput(label)
     onItemAdded(label, min, sec)
     setState(() => ({
       label: '',
