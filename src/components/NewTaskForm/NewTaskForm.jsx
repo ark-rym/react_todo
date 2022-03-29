@@ -9,10 +9,10 @@ const NewTaskForm = ({ onItemAdded }) => {
     sec: '',
   })
 
-  function checkInput(text) {
-    let isValid = text.replace(/^\s+|\s+$/g, '')
-    return isValid
-  }
+  // function checkInput(text) {
+  //   let isValid = text.replace(/^\s+|\s+$/g, '')
+  //   return isValid
+  // }
 
   const onLabelChange = (e) => {
     // if (checkInput(e.target.value)) {
