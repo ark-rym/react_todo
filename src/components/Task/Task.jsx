@@ -97,7 +97,8 @@ const Task = ({ onDeleted, onToggleCompleted, itemProps, onEditItem, onEdit }) =
           className="edit"
           value={newLabel}
           onChange={onLabelChange}
-          ref={labelChange}
+          autoFocus
+          // ref={labelChange}
         />
       </form>
     </li>
