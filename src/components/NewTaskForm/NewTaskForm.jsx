@@ -58,7 +58,7 @@ const NewTaskForm = ({ onItemAdded }) => {
         onChange={onLabelChange}
         value={label}
         autoFocus
-        required
+        // required
       />
       <input
         className="new-todo-form__timer"
@@ -68,7 +68,7 @@ const NewTaskForm = ({ onItemAdded }) => {
         placeholder="Min"
         onChange={onMinChange}
         value={min}
-        required
+        // required
       />
       <input
         className="new-todo-form__timer"
@@ -78,7 +78,7 @@ const NewTaskForm = ({ onItemAdded }) => {
         placeholder="Sec"
         onChange={onSecChange}
         value={sec}
-        required
+        // required
       />
       <input type="submit" className="hidden" />
     </form>
